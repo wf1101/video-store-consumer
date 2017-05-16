@@ -24,6 +24,14 @@ This project will be utilizing an external API. You have two options for which e
 
 ## Project Requirements
 ### Primary View
+- Show a paginated collection of Movies, 10 per page
+  - This will show a movie's
+- Allow a user to interact with a Movie by clicking
+  - When _selected_, a Movie shows more information
+  - When _deselected_, a Movie returns to its default state
+  - Only one movie can be selected at a time
+  - Selected another movie deselects the one which was selected
+- Changing the page deselects a Movie
 
 ### Queue View
 
