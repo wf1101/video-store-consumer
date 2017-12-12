@@ -36,8 +36,8 @@ This project will be utilizing an external API within an API! Whoa! Your front-e
     - [Configuration](https://developers.themoviedb.org/3/configuration/get-api-configuration)
 
 ### 3. Rails Part
-  - One person shall fork [this]() repository
-  - Add the pair as a collaborate on the project
+  - One person shall fork the API repository. You can find it at your cohort's GitHub org, and the project's name is VideoStoreConsumer-API. You should immediately notice that this is a Rails project not a Backbone project.
+  - Add the pair as a collaborator on the project
   - Both people shall clone the repository
   - Set up the DB
   - Ensure both people can run the API locally
