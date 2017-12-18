@@ -85,3 +85,10 @@ Some of these optional requirements require work in the front-end only, back-end
   - See all overdue rentals
 - CRUD customers
 - Introduce scrolling pagination to dynamically load more movies when scrolling to the bottom (research!!)
+
+## Resources
+
+Note, you may need to use non restful API calls for rentals and this can be done by overriding Backbone.sync.  Below are some resources on how to do so.
+
+- [Overriding Backbone.sync for non-RESTful APIs](https://thejsguy.com/2015/03/18/overriding-backbone-sync.html)
+- [Non-RESTful backend with Backbonejs](https://stackoverflow.com/questions/24770250/non-restful-backend-with-backbone-js)
