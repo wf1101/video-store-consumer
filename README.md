@@ -113,16 +113,9 @@ You can have more if you want (for example `/customers/:id`), but ultimately the
 ## Optional Enhancements
 Some of these optional requirements require work in the front-end only, back-end only or both.
 
-- Rental!
-  - Check out: Select a movie along with a customer to create a rental
-  - Check in: Select a customer to see the movies they have checked out. Select a single (or multiple) rentals to check back in
-  - See all overdue rentals
-- CRUD customers
+- Deploy your front-end to GitHub Pages, and your back-end to AWS
+- Set up TravisCI for continuous integration on your back-end
+- Add a detail page for a customer to see the movies they have checked out. Overdue movies should be highlighted.
+- Be able to check in movies from the customer details page
+- Full CRUD for customers
 - Introduce scrolling pagination to dynamically load more movies when scrolling to the bottom (research!!)
-
-## Resources
-
-Note, you may need to use non restful API calls for rentals and this can be done by overriding Backbone.sync.  Below are some resources on how to do so.
-
-- [Overriding Backbone.sync for non-RESTful APIs](https://thejsguy.com/2015/03/18/overriding-backbone-sync.html)
-- [Non-RESTful backend with Backbonejs](https://stackoverflow.com/questions/24770250/non-restful-backend-with-backbone-js)
