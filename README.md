@@ -23,6 +23,8 @@ Our rental store employees want to be able to manage their rental inventory. The
 
 This project will be utilizing an external API within an API! Whoa! Your front-end implementation will be interacting with a **Rails API** that you will be modifying. The Rails API wraps an **external API** which contains many endpoints related to movies. The external API is [The Movie DB](https://www.themoviedb.org/documentation/api).
 
+The requirements for this project are intentionally open-ended. Part of your job is to work with your partner to prioritize them.
+
 ## Project Setup
 
 ### 1. React Front-End
@@ -57,9 +59,7 @@ This project will be utilizing an external API within an API! Whoa! Your front-e
 - Set up the `.env` file with the API key from step #2
 - Ensure both people can run the API locally
 
-## Project Requirements
-
-### Front-End
+## Front-End Requirements
 
 A rental store employee should be able to...
 - search for a movie from the external API
@@ -70,7 +70,7 @@ A rental store employee should be able to...
   - "select" a customer
 - check out the selected movie for the selected customer
 
-#### The React Router
+### The React Router
 
 Your front-end should use the [React Router](https://reacttraining.com/react-router/). You will need to research this as a pair!
 - What problem does it solve?
@@ -86,15 +86,22 @@ Your front-end should have at least the following routes:
 
 You can have more if you want (for example `/customers/:id`), but ultimately the design of your user interface is up to you.
 
-### Back-End
+### Design Considerations
+
+- What display components will you need?
+- How will state be managed in your application?
+- What events will you need to handle?
+- How will you make requests from the front-end to the API?
+
+## Back-End Requirements
 - The search functionality is already implemented!
 - Add support for adding an external movie to the rental library
 
+### Design Considerations
+
 ## Project Design
 ### Front-End
-- Consider what Backbone models, collections and views you will need to utilize
-- Consider what events you will want to handle
-- Consider how you will make requests from the front-end to the API
+
 
 ### Back-End
 - Investigate the existing implementation to gain an understanding of what you are working with
