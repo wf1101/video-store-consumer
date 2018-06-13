@@ -8,7 +8,7 @@ This is a [Phase 3](https://github.com/Ada-Developers-Academy/pedagogy/blob/mast
 
 - Use React to build a dynamic and attractive user interface
 - Organize the behavior of a complex SPA
-- Independently research and implement a new technology
+- Independently research and integrate a new technology
 - Remember how Rails works
 - Own both ends of an API
 - Practice project management skills in prioritizing features and determining deliverables
@@ -60,10 +60,31 @@ This project will be utilizing an external API within an API! Whoa! Your front-e
 ## Project Requirements
 
 ### Front-End
-- Rental store employee should be able to:
-  - search all Movies
-    - add a movie to the rental library
-  - list all movies in the rental library
+
+A rental store employee should be able to...
+- search for a movie from the external API
+  - add a movie from the search results to the rental library
+- list all movies in the rental library
+  - "select" a movie from the library
+- list all customers
+  - "select" a customer
+- check out the selected movie for the selected customer
+
+#### The React Router
+
+Your front-end should use the [React Router](https://reacttraining.com/react-router/). You will need to research this as a pair!
+- What problem does it solve?
+- How do you install it?
+- How do you use it?
+
+Your front-end should have at least the following routes:
+
+- `/` (splash screen)
+- `/search` (search for a movie from the external API)
+- `/library` (list movies in the rental library)
+- `/customers` (list customers)
+
+You can have more if you want (for example `/customers/:id`), but ultimately the design of your user interface is up to you.
 
 ### Back-End
 - The search functionality is already implemented!
