@@ -90,16 +90,6 @@ You can have more if you want (for example `/customers/:id`), but ultimately the
 - The search functionality is already implemented!
 - Add support for adding an external movie to the rental library
 
-<!--
-- Show a paginated collection of Movies, 10 per page
-  - This will show a movie's
-- Allow a user to interact with a Movie by clicking
-  - When _selected_, a Movie shows more information
-  - When _deselected_, a Movie returns to its default state
-  - Only one movie can be selected at a time
-  - Selected another movie deselects the one which was selected
-- Changing the page deselects a Movie -->
-
 ## Project Design
 ### Front-End
 - Consider what Backbone models, collections and views you will need to utilize
@@ -115,6 +105,10 @@ Some of these optional requirements require work in the front-end only, back-end
 
 - Deploy your front-end to GitHub Pages, and your back-end to AWS
 - Set up TravisCI for continuous integration on your back-end
+- Allow a user to interact with a Movie by clicking
+  - When _selected_, a Movie shows more information
+  - When _deselected_, a Movie returns to its default state
+  - Only one movie can be selected at a time - selecting another movie deselects the one which was selected
 - Add a detail page for a customer to see the movies they have checked out. Overdue movies should be highlighted.
 - Be able to check in movies from the customer details page
 - Full CRUD for customers
