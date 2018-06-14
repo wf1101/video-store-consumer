@@ -13,5 +13,4 @@ Add movie to rental library |
 List customers |
 Check out a movie to a customer |
 Overall Look & feel |
-**Optionals** |
 **Overall** |
