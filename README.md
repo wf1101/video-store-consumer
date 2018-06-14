@@ -91,21 +91,26 @@ You can have more if you want (for example `/customers/:id`), but ultimately the
 - What display components will you need?
 - How will state be managed in your application?
 - What events will you need to handle?
+- What user actions will result in API queries?
 - How will you make requests from the front-end to the API?
 
 ## Back-End Requirements
-- The search functionality is already implemented!
-- Add support for adding an external movie to the rental library
 
-### Design Considerations
+The Rails back-end already has a lot of functionality implemented. You can:
+- Get the list of movies in the library
+- Search for movies in the external API
+- Get details on an individual movie
+- Get a list of customers
+- Check movies in and out
+- Get a list of all overdue movies
 
-## Project Design
-### Front-End
+It is worth taking the time to read through this Rails code and understand how the different pieces of the server fit together.
 
+For the core requirements, you will need to add the ability to add a movie from the external API to our library. Things to consider:
 
-### Back-End
-- Investigate the existing implementation to gain an understanding of what you are working with
-- Consider what data the back-end will require to complete the tasks in the requirements
+- How does the front-end specify which movie to add?
+- Where does the Rails server get the information about the movie?
+- What happens if you try to add the same movie twice?
 
 ## Optional Enhancements
 Some of these optional requirements require work in the front-end only, back-end only or both.
