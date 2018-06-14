@@ -74,6 +74,7 @@ If I am a rental store employee...
 - On the customer list page, I can see a list of all customers
 - From the customer list, I can "select" a customer. My customer selection will continue to be visible as I navigate the app.
 - Given I have selected a movie and a customer, I can check out the selected movie for the selected customer
+  - NOTE: a checkout is between ONE movie and ONE customer
 
 ### The React Router
 
