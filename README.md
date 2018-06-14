@@ -61,14 +61,19 @@ The requirements for this project are intentionally open-ended. Part of your job
 
 ## Front-End Requirements
 
-A rental store employee should be able to...
-- search for a movie from the external API
-  - add a movie from the search results to the rental library
-- list all movies in the rental library
-  - "select" a movie from the library
-- list all customers
-  - "select" a customer
-- check out the selected movie for the selected customer
+If I am a rental store employee...
+
+- From the home page, I can navigate to the following pages:
+  - Movie search page
+  - Movie library page
+  - Customer list page
+- From the movie search page, I can search for a movie by title from the external API
+- From the movie search results, I can add a movie from the search results to the rental library
+- From the rental library page, I can see a list of all movies in the rental library
+- From the rental library list, I can "select" a movie from the rental library. My movie selection will continue to be visible as I navigate the app.
+- On the customer list page, I can see a list of all customers
+- From the customer list, I can "select" a customer. My customer selection will continue to be visible as I navigate the app.
+- Given I have selected a movie and a customer, I can check out the selected movie for the selected customer
 
 ### The React Router
 
@@ -79,10 +84,10 @@ Your front-end should use the [React Router](https://reacttraining.com/react-rou
 
 Your front-end should have at least the following routes:
 
-- `/` (splash screen)
-- `/search` (search for a movie from the external API)
-- `/library` (list movies in the rental library)
-- `/customers` (list customers)
+- `/` (home page)
+- `/search` (movie search page: allows the user to search for a movie from the external API)
+- `/library` (rental library page: lists movies in the rental library)
+- `/customers` (customer list page: lists customers)
 
 You can have more if you want (for example `/customers/:id`), but ultimately the design of your user interface is up to you.
 
