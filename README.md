@@ -125,3 +125,6 @@ Some of these optional requirements require work in the front-end only, back-end
 - Be able to check in movies from the customer details page
 - Full CRUD for customers
 - Introduce scrolling pagination to dynamically load more movies when scrolling to the bottom (research!!)
+
+## What we're looking for
+You can see what your instructors are looking for [here](./feedback.md)
