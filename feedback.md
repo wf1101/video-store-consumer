@@ -3,14 +3,14 @@
 
 Feature | Feedback
 :------------- | :-------------
-**Core Requirements** | 
-Git hygiene - pair contribution | 
-Comprehension questions | 
-**General** | 
-Search functionality | 
-Rental library listing functionality | 
-Add to rental library functionality | 
-Underscore Templates | 
-Overall Look & feel | 
-**Optionals** | 
-**Overall** | 
+**Core Requirements** |
+Git hygiene - pair contribution |
+Comprehension questions |
+**General Functionality** |
+Search the external API |
+List movies in the rental library |
+Add movie to rental library |
+List customers |
+Check out a movie to a customer |
+Overall Look & feel |
+**Overall** |
