@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Movie extends React.Component{
 	static propTypes = {
 		title: PropTypes.string,
-		image_url: PropTypes.func
+		image_url: PropTypes.string
 	}
 
 	render(){
