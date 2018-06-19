@@ -5,6 +5,8 @@ import Movie from './Movie.js';
 const MOVIEDB_KEY = process.env.REACT_APP_MOVIEDB_KEY;
 const API_URL = 'https://api.themoviedb.org/3/search/movie';
 
+const IMAGE_URL = 'http://d2e70e9yced57e.cloudfront.net/wallethub/images/posts/13844/why-does-movie-popcorn-cost-so-much.jpg';
+
 class Search extends React.Component{
 	state = {
 		query: '',
@@ -44,7 +46,7 @@ class Search extends React.Component{
 			return <Movie
 				key={ index }
 				title={ movie.title }
-				image_url={ imageUrl + movie.poster_path }
+				image_url={ movie.poster_path ? (imageUrl + movie.poster_path) : IMAGE_URL }
 			/>
 		})
 
