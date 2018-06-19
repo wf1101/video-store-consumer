@@ -25,6 +25,7 @@ class Library extends React.Component {
 				key={ index }
 				title={ movie.title }
 				image_url={ movie.image_url }
+				overview={ movie.overview }
 			/>
 		})
 

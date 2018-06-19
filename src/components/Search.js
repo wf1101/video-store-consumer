@@ -47,6 +47,7 @@ class Search extends React.Component{
 				key={ index }
 				title={ movie.title }
 				image_url={ movie.poster_path ? (imageUrl + movie.poster_path) : IMAGE_URL }
+				overview={ movie.overview }
 			/>
 		})
 
