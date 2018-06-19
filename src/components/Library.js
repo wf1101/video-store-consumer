@@ -12,7 +12,7 @@ class Library extends React.Component {
 	componentDidMount(){
 		axios.get('http://localhost:3000/movies')
 		.then((response) => {
-			console.log(response);
+			console.log(`library movies: ${response.data}`);
 			this.setState({ movies: response.data})
 		})
 		.catch((error) => {
@@ -20,6 +20,7 @@ class Library extends React.Component {
 		})
 	}
 	render() {
+		console.log(this.state.movies);
 		const movieData = this.state.movies.map((movie, index) => {
 			return <Movie
 				key={ index }

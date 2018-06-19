@@ -12,13 +12,13 @@ class Movie extends React.Component{
 	}
 
 	createMovie = () => {
-		console.log(this.props.title);
+		// console.log(this.props.title);
 		const movie = {
 			title: this.props.title,
 			external_id: this.props.external_id,
 			image_url: this.props.image_url,
 			inventory: 5,
-			release_date: Date.parse(this.props.release_date),
+			release_date: this.props.release_date,
 			overview: this.props.overview
 		}
 

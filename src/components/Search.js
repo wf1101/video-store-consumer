@@ -2,11 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Movie from './Movie.js';
 
-const MOVIEDB_KEY = process.env.REACT_APP_MOVIEDB_KEY;
-const API_URL = 'https://api.themoviedb.org/3/search/movie';
-
-const IMAGE_URL = 'http://d2e70e9yced57e.cloudfront.net/wallethub/images/posts/13844/why-does-movie-popcorn-cost-so-much.jpg';
-
 class Search extends React.Component{
 	state = {
 		query: '',
@@ -19,13 +14,13 @@ class Search extends React.Component{
 		})
 	}
 
-	listMovies() {
-		axios.get(`${API_URL}?api_key=${MOVIEDB_KEY}&query=${this.state.query}`)
+	listMovies(searchTerm) {
+		axios.get(`http://localhost:3000/movies/?query=${searchTerm}`)
 		.then((response) => {
-			console.log(response.data);
 			this.setState({
-				movies: response.data.results.slice(0, 20)
+				movies: response.data
 			})
+			console.log(response.data);
 		})
 		.catch((error) => {
 			console.log(error);
@@ -35,8 +30,7 @@ class Search extends React.Component{
 	onFormSubmit = (event) => {
 		event.preventDefault();
 
-		console.log("event");
-		this.listMovies();
+		this.listMovies(this.state.query);
 	}
 
 	addMovie = (movie) => {
@@ -50,15 +44,15 @@ class Search extends React.Component{
 	}
 
 	render(){
-		const imageUrl = 'https://image.tmdb.org/t/p/w300'
-
+		console.log(`movie list: ${this.state.movies}`);
 		const movieList = this.state.movies.map((movie, index) => {
 			return <Movie
 				key={index}
 				title={ movie.title }
-				external_id={ movie.id }
-				image_url={ movie.poster_path ? (imageUrl + movie.poster_path) : IMAGE_URL }
+				external_id={ movie.external_id }
+				image_url={ movie.image_url }
 				overview={ movie.overview }
+				release_date={ movie.release_date }
 				addMovieCallback= { this.addMovie }
 			/>
 		})
