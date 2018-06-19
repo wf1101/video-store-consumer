@@ -36,7 +36,17 @@ class Search extends React.Component{
 		event.preventDefault();
 
 		console.log("event");
-    this.listMovies();
+		this.listMovies();
+	}
+
+	addMovie = (movie) => {
+		axios.post('http://localhost:3000/movies', movie)
+		.then((response) => {
+			console.log(response.data);
+		})
+		.catch((error) => {
+      console.log(error);
+		});
 	}
 
 	render(){
@@ -44,10 +54,12 @@ class Search extends React.Component{
 
 		const movieList = this.state.movies.map((movie, index) => {
 			return <Movie
-				key={ index }
+				key={index}
 				title={ movie.title }
+				external_id={ movie.id }
 				image_url={ movie.poster_path ? (imageUrl + movie.poster_path) : IMAGE_URL }
 				overview={ movie.overview }
+				addMovieCallback= { this.addMovie }
 			/>
 		})
 
