@@ -4,12 +4,14 @@ import Library from './components/Library';
 import Search from './components/Search';
 import CustomerCollection from'./components/CustomerCollection';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Rental from './components/Rental';
 
 class App extends Component {
 	render() {
 		return (
 			<Router>
 				<div>
+					<Rental/>
 					<ul>
 						<li>
 							<Link to="/">Home</Link>
@@ -27,6 +29,7 @@ class App extends Component {
 					<Route path="/search" component={ Search }/>
 					<Route path="/library" component={ Library }/>
 					<Route path="/customers" component={ CustomerCollection }/>
+
 				</div>
 			</Router>
 		);
