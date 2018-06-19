@@ -44,7 +44,6 @@ class Search extends React.Component{
 	}
 
 	render(){
-		console.log(`movie list: ${this.state.movies}`);
 		const movieList = this.state.movies.map((movie, index) => {
 			return <Movie
 				key={index}

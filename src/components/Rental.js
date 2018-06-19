@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Rental extends React.Component{
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
-      movieName: "None",
-      customerName: "None"
+      movieName: props.movieName,
+      customerName: props.customerName
     }
   }
 
@@ -22,6 +22,7 @@ class Rental extends React.Component{
   }
 
   componentDidUpdate(prevProps) {
+		console.log('lalala');
     if (this.props.movieName !== prevProps.movieName) {
       this.setState({movieName: this.props.movieName})
     }
@@ -29,7 +30,6 @@ class Rental extends React.Component{
 
   render(){
     const selectedMovie = this.state.movieName
-
     const selectedCustomer = this.state.customerName
 
     return (

@@ -5,13 +5,29 @@ import Search from './components/Search';
 import CustomerCollection from'./components/CustomerCollection';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Rental from './components/Rental';
+import Movie from './components/Movie';
+
 
 class App extends Component {
+	constructor() {
+		super();
+
+		this.state = {
+			movieName: "None",
+			customerName: "None"
+		}
+	}
+
+	selectMovie = () => {
+
+	}
+
 	render() {
 		return (
 			<Router>
 				<div>
-					<Rental/>
+					<Rental />
+
 					<ul>
 						<li>
 							<Link to="/">Home</Link>

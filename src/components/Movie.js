@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Rental from './Rental';
 
 class Movie extends React.Component{
 	static propTypes = {
@@ -7,6 +8,7 @@ class Movie extends React.Component{
 		image_url: PropTypes.string,
 		overview: PropTypes.string,
 		addMovieCallback: PropTypes.func,
+		selectMovieCallback: PropTypes.func,
 		external_id: PropTypes.number,
 		release_date: PropTypes.string
 	}
@@ -23,9 +25,12 @@ class Movie extends React.Component{
 		}
 
 		this.props.addMovieCallback(movie)
-
 	}
 
+	changeMovie = (event) => {
+		event.preventDefault();
+		this.props.selectMovieCallback( this.props.title )
+	}
 
 	render(){
 		let btn = ''
@@ -34,13 +39,16 @@ class Movie extends React.Component{
 		} else {
 			btn = 'Select movie'
 		}
+		console.log(btn);
 		return(
-			<section>
-				<button onClick={ this.createMovie }>{ btn }</button>
-				<img src={ this.props.image_url } alt='movie-poster'/>
-				<h2>Name: { this.props.title }</h2>
-				<p>Overview: {this.props.overview }</p>
-			</section>
+			<div>
+				<section>
+					<button onClick={ btn === 'Add to library' ? this.addMovie : this.changeMovie }>{ btn }</button>
+					<img src={ this.props.image_url } alt='movie-poster'/>
+					<h2>Name: { this.props.title }</h2>
+					<p>Overview: {this.props.overview }</p>
+				</section>
+			</div>
 		)
 	}
 }
