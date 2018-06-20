@@ -60,7 +60,7 @@ class App extends Component {
 					<header>
 						<ul className="navigation">
 							<li>
-								<Link to="/"><img src={require("./images/house.png")}/></Link>
+								<Link to="/"><img src={require("./images/shiba.png")}/></Link>
 							</li>
 							<li>
 								<Link to="/search"><img src={require("./images/search.png")}/></Link>
@@ -72,6 +72,7 @@ class App extends Component {
 								<Link to="/customers"><img src={require("./images/customers.png")}/></Link>
 							</li>
 						</ul>
+
 
 						<Rental movieName={ this.state.movieName }
 							customerName={ this.state.customerName }
@@ -85,6 +86,8 @@ class App extends Component {
 							type={ this.state.status.type }
 						/>
 					</section>
+
+
 					<Route
 						path="/search"
 						render={(props) => <Search {...props}
