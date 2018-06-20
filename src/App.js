@@ -60,8 +60,12 @@ class App extends Component {
 					<h5>Selected Customer: { this.state.customerName }</h5>
 					<button onClick={ this.createRental }>Rent Now</button>
 					<Route path="/search" component={ Search }/>
-					<Route path="/library" render={(props) => <Library {...props} selectMovieCallback={ this.selectMovie }/> } />
-					<Route path="/customers" render={(props) => <CustomerCollection {...props} selectCustomerCallback={ this.selectCustomer }/>}
+					<Route
+						path="/library"
+						render={(props) => <Library {...props} selectMovieCallback={ this.selectMovie }/> } />
+					<Route
+						path="/customers"
+						render={(props) => <CustomerCollection {...props} selectCustomerCallback={ this.selectCustomer }/>}
 					/>
 
 				</div>
