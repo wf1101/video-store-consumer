@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Rental from './Rental';
 
 class Movie extends React.Component{
 	static propTypes = {
@@ -28,13 +27,13 @@ class Movie extends React.Component{
 		this.props.addMovieCallback(movie)
 	}
 
-	selectMovieCallback = () => {
+	selectMovie = () => {
 		this.props.selectMovieCallback( this.props.title )
 	}
 
 	showButton = () => {
 		if (this.props.buttonName === "Maybe This One") {
-			return <button onClick={ this.selectMovieCallback }>{ this.props.buttonName }</button>
+			return <button onClick={ this.selectMovie }>{ this.props.buttonName }</button>
 		} else if (this.props.buttonName === "Add to Library") {
 			return <button onClick={ this.createMovie }>{ this.props.buttonName }</button>
 		}

@@ -14,13 +14,12 @@ class CustomerCollection extends React.Component{
   componentDidMount(){
     axios.get('http://localhost:3000/customers')
     .then((response) => {
-      console.log(response);
+      this.props.updateStatusCallback(`Successfully loaded ${response.data.length} customers`, 'success');
+
       this.setState({ customers: response.data})
     })
     .catch((error) => {
-      this.setState({
-        error: error.message
-      })
+			this.props.updateStatusCallback( error.message, 'error')
     });
   }
   render() {

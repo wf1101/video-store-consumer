@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import Movie from './Movie.js';
 import './Search.css';
 
+
 class Search extends React.Component{
+	static propTypes = {
+		updateStatusCallback: PropTypes.func,
+	}
+
 	state = {
 		query: '',
 		movies: []
@@ -18,13 +24,13 @@ class Search extends React.Component{
 	listMovies(searchTerm) {
 		axios.get(`http://localhost:3000/movies/?query=${searchTerm}`)
 		.then((response) => {
+			this.props.updateStatusCallback(`Found ${response.data.length} results for ${ searchTerm }`, 'success');
 			this.setState({
 				movies: response.data
 			})
-			console.log(response.data);
 		})
 		.catch((error) => {
-			console.log(error);
+			this.props.updateStatusCallback( error.message, 'error')
 		});
 	}
 
@@ -37,10 +43,10 @@ class Search extends React.Component{
 	addMovie = (movie) => {
 		axios.post('http://localhost:3000/movies', movie)
 		.then((response) => {
-			console.log(response.data);
+			this.props.updateStatusCallback(`Successfully added movie ${ movie.title }`, 'success');
 		})
 		.catch((error) => {
-      console.log(error);
+			this.props.updateStatusCallback( error.message, 'error')
 		});
 	}
 
