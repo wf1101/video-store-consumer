@@ -2,8 +2,14 @@ import React from 'react';
 import Movie from './Movie.js';
 import axios from 'axios';
 import './Library.css';
+import PropTypes from 'prop-types';
 
 class Library extends React.Component {
+	static propTypes = {
+		updateStatusCallback: PropTypes.func,
+		selectMovieCallback: PropTypes.func
+	}
+
 	constructor(props){
 		super(props);
 		this.state = {
@@ -13,10 +19,12 @@ class Library extends React.Component {
 	componentDidMount(){
 		axios.get('http://localhost:3000/movies')
 		.then((response) => {
+			this.props.updateStatusCallback(`Successfully loaded ${response.data.length} movies`, 'success');
+
 			this.setState({ movies: response.data})
 		})
 		.catch((error) => {
-		  this.setState({ error: error.message })
+			this.props.updateStatusCallback( error.message, 'error')
 		});
 	}
 
@@ -32,7 +40,7 @@ class Library extends React.Component {
 				selectMovieCallback={ this.props.selectMovieCallback }
 				buttonName="Maybe This One"
 			/>
-	  })
+		})
 
 		return(
 			<div>
