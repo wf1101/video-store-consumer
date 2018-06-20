@@ -60,7 +60,7 @@ class App extends Component {
 					<header>
 						<ul className="navigation">
 							<li>
-								<Link to="/"><img src={require("./images/shiba.png")}/></Link>
+								<Link to="/"><img className="shiba" src={require("./images/shiba.png")}/></Link>
 							</li>
 							<li>
 								<Link to="/search"><img src={require("./images/search.png")}/></Link>
