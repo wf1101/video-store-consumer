@@ -58,27 +58,30 @@ class App extends Component {
 			<Router>
 				<div>
 					<header>
-						<ul className="navigation">
-							<li>
+						<div className="navigation">
+							<div className="shiba-spot">
 								<Link to="/"><img className="shiba" src={require("./images/shiba.png")}/></Link>
-							</li>
-							<li>
-								<Link to="/search"><img src={require("./images/search.png")}/></Link>
-							</li>
-							<li>
-								<Link to="/library"><img src={require("./images/video.png")}/></Link>
-							</li>
-							<li>
-								<Link to="/customers"><img src={require("./images/customers.png")}/></Link>
-							</li>
-						</ul>
+							</div>
+							<div className="top-nav">
+                <div className="links">
+									<Link to="/search"><img src={require("./images/search.png")}/></Link>
+
+									<Link to="/library"><img src={require("./images/video.png")}/></Link>
+
+									<Link to="/customers"><img src={require("./images/customers.png")}/></Link>
+								</div>
+                <div className="rental-info">
+									<Rental movieName={ this.state.movieName }
+										customerName={ this.state.customerName }
+										customerID={ this.state.customerID }
+										updateStatusCallback={ this.updateStatus }
+										/>
+								</div>
+							</div>
+						</div>
 
 
-						<Rental movieName={ this.state.movieName }
-							customerName={ this.state.customerName }
-							customerID={ this.state.customerID }
-							updateStatusCallback={ this.updateStatus }
-						/>
+
 					</header>
 					<section>
 						<Status
