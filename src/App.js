@@ -8,6 +8,7 @@ import Rental from './components/Rental';
 import Movie from './components/Movie';
 
 
+
 class App extends Component {
 	constructor() {
 		super();
@@ -44,16 +45,16 @@ class App extends Component {
 				<div>
 					<ul className="navigation">
 						<li>
-							<Link to="/">Home</Link>
+							<Link to="/"><img src={require("./images/house.png")}/></Link>
 						</li>
 						<li>
-							<Link to="/search">Search</Link>
+							<Link to="/search"><img src={require("./images/search.png")}/></Link>
 						</li>
 						<li>
-							<Link to="/library">Library</Link>
+							<Link to="/library"><img src={require("./images/video.png")}/></Link>
 						</li>
 						<li>
-							<Link to="/customers">Customers</Link>
+							<Link to="/customers"><img src={require("./images/customers.png")}/></Link>
 						</li>
 					</ul>
 					<h5>Selected Movie: { this.state.movieName }</h5>
