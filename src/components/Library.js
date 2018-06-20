@@ -43,7 +43,7 @@ class Library extends React.Component {
 		})
 
 		return(
-			<div>
+			<div className="library">
 				{ movieData }
 			</div>
 		);

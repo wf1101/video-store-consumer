@@ -1,0 +1,28 @@
+.single-movie {
+	width: 350px;
+	height: 650px;
+	border: 3px solid rgb(59, 89, 152);
+	background-color: rgb(223,227,238);
+	margin: 10px;
+	text-align: center;
+}
+
+button {
+	border: 3px solid rgb(59, 89, 152);
+	font-size: 1.2rem;
+	margin-top: 10px;
+}
+
+.overview .overview-text {
+	visibility: hidden;
+	width: 300px;
+	background-color: rgb(59, 89, 152);
+	color: white;
+	text-align: center;
+	padding: 5px;
+	position: absolute;
+}
+
+.overview:hover .overview-text {
+	visibility: visible;
+}

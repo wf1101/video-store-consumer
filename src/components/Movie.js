@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Movie.css';
 
 class Movie extends React.Component{
 	static propTypes = {
@@ -42,12 +43,12 @@ class Movie extends React.Component{
 	render(){
 
 		return(
-			<div>
+			<div className="single-movie">
 				<section>
+					<h2>{ this.props.title }</h2>
 					<img src={ this.props.image_url } alt='movie-poster'/>
-					<h2>Name: { this.props.title }</h2>
-					<p>Overview: {this.props.overview }</p>
 					{ this.showButton() }
+					<p className="overview">Overview<span className="overview-text">{this.props.overview }</span></p>
 				</section>
 			</div>
 		)

@@ -2,10 +2,22 @@
 	display: none;
 }
 
+.status {
+	margin: 50px auto;
+	text-align: center;
+}
+
 .success {
-	color: green;
+	color: rgb(59, 89, 152);
+	font-size: 2rem;
+  font-weight: bold;
 }
 
 .error {
 	color: red;
+}
+
+.status button {
+	margin-left: 20px;
+	border-radius: 30%;
 }
