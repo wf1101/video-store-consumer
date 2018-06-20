@@ -14,21 +14,35 @@ class App extends Component {
 
 		this.state = {
 			movieName: "None",
-			customerName: "None"
+			customerName: "None",
+			customerID: ""
 		}
 	}
 
-	selectMovie = () => {
+	selectMovie = (title) => {
+    this.setState({
+			movieName: title
+		});
+	}
 
+	selectCustomer = (name, id) => {
+		this.setState({
+			customerName: name,
+			customerID: id
+		});
+	}
+
+	createRental = () => {
+		console.log(this.state.movieName)
+		console.log(this.state.customerName)
+		console.log(this.state.customerID)
 	}
 
 	render() {
 		return (
 			<Router>
 				<div>
-					<Rental />
-
-					<ul>
+					<ul className="navigation">
 						<li>
 							<Link to="/">Home</Link>
 						</li>
@@ -42,9 +56,13 @@ class App extends Component {
 							<Link to="/customers">Customers</Link>
 						</li>
 					</ul>
+					<h5>Selected Movie: { this.state.movieName }</h5>
+					<h5>Selected Customer: { this.state.customerName }</h5>
+					<button onClick={ this.createRental }>Rent Now</button>
 					<Route path="/search" component={ Search }/>
-					<Route path="/library" component={ Library }/>
-					<Route path="/customers" component={ CustomerCollection }/>
+					<Route path="/library" render={(props) => <Library {...props} selectMovieCallback={ this.selectMovie }/> } />
+					<Route path="/customers" render={(props) => <CustomerCollection {...props} selectCustomerCallback={ this.selectCustomer }/>}
+					/>
 
 				</div>
 			</Router>

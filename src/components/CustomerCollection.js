@@ -18,15 +18,19 @@ class CustomerCollection extends React.Component{
       this.setState({ customers: response.data})
     })
     .catch((error) => {
-      console.log(error);
-    })
+      this.setState({
+        error: error.message
+      })
+    });
   }
   render() {
     const customerData = this.state.customers.map((customer, index) => {
       return <Customer
         key={ index }
         name={ customer.name }
+        customerID={ customer.id }
         phone={ customer.phone }
+        selectCustomerCallback= { this.props.selectCustomerCallback }
       />
     })
 

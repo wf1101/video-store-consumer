@@ -10,7 +10,8 @@ class Movie extends React.Component{
 		addMovieCallback: PropTypes.func,
 		selectMovieCallback: PropTypes.func,
 		external_id: PropTypes.number,
-		release_date: PropTypes.string
+		release_date: PropTypes.string,
+		buttonName: PropTypes.string
 	}
 
 	createMovie = () => {
@@ -27,26 +28,27 @@ class Movie extends React.Component{
 		this.props.addMovieCallback(movie)
 	}
 
-	changeMovie = (event) => {
-		event.preventDefault();
+	selectMovieCallback = () => {
 		this.props.selectMovieCallback( this.props.title )
 	}
 
-	render(){
-		let btn = ''
-		if (this.props.addMovieCallback) {
-			btn = 'Add to library'
-		} else {
-			btn = 'Select movie'
+	showButton = () => {
+		if (this.props.buttonName === "Maybe This One") {
+			return <button onClick={ this.selectMovieCallback }>{ this.props.buttonName }</button>
+		} else if (this.props.buttonName === "Add to Library") {
+			return <button onClick={ this.createMovie }>{ this.props.buttonName }</button>
 		}
-		console.log(btn);
+	}
+
+	render(){
+
 		return(
 			<div>
 				<section>
-					<button onClick={ btn === 'Add to library' ? this.addMovie : this.changeMovie }>{ btn }</button>
 					<img src={ this.props.image_url } alt='movie-poster'/>
 					<h2>Name: { this.props.title }</h2>
 					<p>Overview: {this.props.overview }</p>
+					{ this.showButton() }
 				</section>
 			</div>
 		)

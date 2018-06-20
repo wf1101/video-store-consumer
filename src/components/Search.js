@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Movie from './Movie.js';
+import './Search.css';
 
 class Search extends React.Component{
 	state = {
@@ -53,6 +54,7 @@ class Search extends React.Component{
 				overview={ movie.overview }
 				release_date={ movie.release_date }
 				addMovieCallback= { this.addMovie }
+				buttonName="Add to Library"
 			/>
 		})
 
