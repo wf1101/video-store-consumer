@@ -16,11 +16,14 @@ class Customer extends React.Component{
 
 	render(){
 		return(
-			<section>
-				<h5>Name: { this.props.name }</h5>
-				<h5>Phone: { this.props.phone }</h5>
-				<button onClick={ this.selectCustomerCallback}>Select Customer</button>
-			</section>
+			<div className="single-customer">
+				<section>
+					<h2>{ this.props.name }</h2>
+					<img src={require("../images/penguin.png")}/>
+					<h3>{ this.props.phone }</h3>
+					<button onClick={ this.selectCustomerCallback}>Select Customer</button>
+				</section>
+			</div>
 		)
 	}
 }

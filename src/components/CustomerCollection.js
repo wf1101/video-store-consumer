@@ -1,6 +1,7 @@
 import React from 'react';
 import Customer from './Customer';
 import axios from 'axios';
+import './CustomerCollection.css';
 
 class CustomerCollection extends React.Component{
   constructor(){
@@ -34,7 +35,7 @@ class CustomerCollection extends React.Component{
     })
 
     return(
-      <div>
+      <div className="customer-display">
         { customerData }
       </div>
     )

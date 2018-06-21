@@ -2,6 +2,11 @@
   background-color: rgb(59, 89, 152);
   text-align: center;
   margin: 50px 150px;
+}
+
+.search-input {
+  text-align: center;
+  margin: 50px 150px;
   font-size: 2.5rem;
 }
 

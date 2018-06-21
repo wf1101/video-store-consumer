@@ -70,7 +70,7 @@ class Search extends React.Component{
 					<input className="search-input" placeholder="Find a movie" name="title" value={ this.state.query } onChange={this.handleInputChange}/>
 					<input className="submit-search" type="submit" value="Search"/>
 				</form>
-				<section>
+				<section className="library">
 					{ movieList }
 				</section>
 			</div>

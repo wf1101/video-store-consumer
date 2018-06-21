@@ -1,1 +1,8 @@
-
+.single-customer {
+	width: 350px;
+	height: 475px;
+	border: 3px solid rgb(59, 89, 152);
+	background-color: rgb(223,227,238);
+	margin: 10px;
+	text-align: center;
+}
