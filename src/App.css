@@ -12,15 +12,11 @@ a {
 }
 
 img {
-	width: 300px;
+	width: 260px;
 }
 
 .shiba {
   border-radius: 5%;
-}
-
-.shiba-spot {
-  width: 30%;
 }
 
 .top-nav {
@@ -32,4 +28,26 @@ img {
   height: 200px;
   width: 200px;
   margin: 0 30px;
+}
+
+.shiba-spot {
+	margin-right: 40px;
+
+}
+
+header {
+	margin: 50px 100px 50px 175px;
+	padding-left: 50px;
+}
+
+.top-nav .links {
+	padding: 30px;
+}
+
+.top-nav .rental-container {
+	font-size: 1.6rem;
+}
+
+.rental-info {
+	align-content: center;
 }

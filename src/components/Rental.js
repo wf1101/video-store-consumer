@@ -38,13 +38,15 @@ class Rental extends React.Component{
 		render(){
 			return (
 				<div className="rental-container">
-					<span className="label">Selected Movie</span>
-					<span>{this.props.movieName}</span>
-					<span className="label">Selected Customer</span>
-					<span>{this.props.customerName}</span>
-					<span>
-            <button onClick={ this.createRental }>Rent Now</button>
-          </span>
+					<div className="movie-name">
+						<span className="label">Selected Movie</span>
+						<span className="names">{this.props.movieName}</span>
+					</div>
+					<div className="customer-name">
+						<span className="label">Selected Customer</span>
+						<span className="names">{this.props.customerName}</span>
+					</div>
+					<button onClick={ this.createRental }>Rent Now</button>
 				</div>
 			)
 		}

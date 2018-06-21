@@ -1,9 +1,28 @@
 
 .label {
-  font-weight: bold;
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: rgb(59, 89, 152);
+	border: 3px dotted rgb(139, 157, 195);
+}
+
+.rental-container .names {
+	max-width: 200px;
+	color: rgb(59, 89, 152);
 }
 
 .rental-container {
-  display: flex;
-  justify-content: space-around;
+	height: 70%;
+	margin: 30px 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-name, .customer-name {
+	margin: 20px 0px;
+}
+
+.names {
+	margin-left: 20px;
+	font-size: 1.2rem;
 }

@@ -21,3 +21,10 @@
 	margin-left: 20px;
 	border-radius: 30%;
 }
+
+.status {
+	border-top: 3px dashed rgb(139, 157, 195);
+	margin: 50px 150px;
+	padding-top: 50px;
+
+}
