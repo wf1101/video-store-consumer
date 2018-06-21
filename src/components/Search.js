@@ -65,10 +65,10 @@ class Search extends React.Component{
 		})
 
 		return(
-			<div>
+			<div className="search-bar">
 				<form onSubmit={ this.onFormSubmit }>
-					<input placeholder="Find a movie" name="title" value={ this.state.query } onChange={this.handleInputChange}/>
-					<input type="submit" value="Search"/>
+					<input className="search-input" placeholder="Find a movie" name="title" value={ this.state.query } onChange={this.handleInputChange}/>
+					<input className="submit-search" type="submit" value="Search"/>
 				</form>
 				<section>
 					{ movieList }

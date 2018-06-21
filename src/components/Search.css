@@ -1,0 +1,12 @@
+.search-bar {
+  background-color: rgb(59, 89, 152);
+  text-align: center;
+  margin: 50px 150px;
+  font-size: 2.5rem;
+}
+
+.search-input, .submit-search {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
