@@ -5,6 +5,7 @@
 	color: rgb(59, 89, 152);
 	border: 3px dotted rgb(139, 157, 195);
 	padding: 8px;
+	border-radius: 5%;
 }
 
 .rental-container .names {

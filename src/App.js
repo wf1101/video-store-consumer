@@ -24,7 +24,7 @@ class App extends Component {
 			customerName: "None",
 			customerID: null,
 			status: {
-				message: 'Loaded the page successfully',
+				message: `Welcome to such movie so wow`,
 				type: 'success'
 			}
 		}
@@ -56,7 +56,7 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div>
+				<div className="body">
 					<header>
 						<div className="navigation">
 							<div className="shiba-spot">
@@ -84,7 +84,7 @@ class App extends Component {
 
 
 					</header>
-					<section>
+					<section className="body">
 						<Status
 							message={ this.state.status.message }
 							type={ this.state.status.type }
